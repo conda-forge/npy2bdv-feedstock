@@ -1,18 +1,18 @@
 {% set name = "npy2bdv" %}
-{% set version = "1.0.8" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/npy2bdv-{{ version }}.tar.gz
-  sha256: 2ff0da05c4fe0a07d5e0fe89010466a892a2554c2c7445513e9f2e3522cb8760
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/npy2bdv-{{ version }}.tar.gz
+  sha256: c7333b44c0ed360781639b090c6c039b56dbe9d6db4c33e8964c0a184839cda1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
